@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kumuda Kalidindi — DevOps / SRE</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets (order matters) -->
+  <link rel="stylesheet" href="css/reset.css"/>
+  <link rel="stylesheet" href="css/variables.css"/>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/nav.css"/>
+  <link rel="stylesheet" href="css/cursor.css"/>
+  <link rel="stylesheet" href="css/marquee.css"/>
+  <link rel="stylesheet" href="css/animations.css"/>
+  <link rel="stylesheet" href="css/sections/hero.css"/>
+  <link rel="stylesheet" href="css/sections/numbers.css"/>
+  <link rel="stylesheet" href="css/sections/experience.css"/>
+  <link rel="stylesheet" href="css/sections/skills.css"/>
+  <link rel="stylesheet" href="css/sections/achievements.css"/>
+  <link rel="stylesheet" href="css/sections/contact.css"/>
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div id="cur"></div>
+
+  <!-- Navigation -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="#">KK/</a>
+    <ul class="nav-links">
+      <li><a href="#s3">Work</a></li>
+      <li><a href="#s4">Skills</a></li>
+      <li><a href="#s5">Awards</a></li>
+      <li><a href="#s6">Contact</a></li>
+    </ul>
+    <div class="nav-right">Hyderabad, India ✦</div>
+  </nav>
+
+  <!-- Sections (each is its own partial) -->
+  <!-- prettier-ignore -->
+  <div id="sections-root">
+    <!-- injected by sections/loader or included statically below -->
+  </div>
+
+  <!-- Section: Hero -->
+  <section id="s1" class="section section--hero">
+    <div class="floaters" aria-hidden="true">
+      <svg class="float-svg" style="top:8%;left:3%;width:70px;animation-duration:3.5s" viewBox="0 0 50 50"><path d="M25 0 L28 19 L47 22 L28 26 L25 50 L22 26 L3 22 L22 19 Z" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2"/></svg>
+      <svg class="float-svg" style="top:12%;right:5%;width:55px;animation-duration:5s;animation-delay:.8s" viewBox="0 0 50 50"><circle cx="25" cy="25" r="22" fill="none" stroke="var(--yellow)" stroke-width="3"/><circle cx="25" cy="25" r="10" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2"/></svg>
+      <svg class="float-svg" style="bottom:18%;left:6%;width:80px;animation-duration:4.5s;animation-delay:.3s" viewBox="0 0 60 60"><ellipse cx="30" cy="30" rx="28" ry="28" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2.5"/><text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-size="28">☁️</text></svg>
+      <svg class="float-svg" style="top:30%;right:2%;width:65px;animation-duration:6s;animation-delay:1.2s" viewBox="0 0 50 50"><rect x="5" y="5" width="40" height="40" rx="8" fill="none" stroke="var(--yellow)" stroke-width="2.5" transform="rotate(15 25 25)"/></svg>
+      <svg class="float-svg" style="bottom:5%;right:8%;width:200px;animation-duration:7s" viewBox="0 0 200 200">
+        <ellipse cx="100" cy="125" rx="90" ry="18" fill="none" stroke="var(--dark)" stroke-width="3" opacity=".5"/>
+        <circle cx="100" cy="100" r="55" fill="var(--yellow)" stroke="var(--dark)" stroke-width="3"/>
+        <circle cx="80" cy="85" r="12" fill="var(--red)" stroke="var(--dark)" stroke-width="2"/>
+        <circle cx="115" cy="110" r="8" fill="var(--teal)" stroke="var(--dark)" stroke-width="2"/>
+        <circle cx="95" cy="100" r="5" fill="var(--sky)" stroke="var(--dark)" stroke-width="1.5"/>
+        <ellipse cx="100" cy="125" rx="65" ry="12" fill="none" stroke="var(--yellow)" stroke-width="2.5"/>
+      </svg>
+    </div>
+
+    <div class="hero-top">
+      <div class="hero-left">
+        <div class="hero-tag">✦ DevOps Engineer &amp; SRE</div>
+        <h1 class="hero-name">
+          <span>KUMUDA</span>
+          <span>KALI-</span>
+          <span>NINDI</span>
+        </h1>
+        <p class="hero-title-line">BUILDING INFRA THAT NEVER BREAKS</p>
+        <p class="hero-desc">
+          Results-driven DevOps/SRE engineering scalable cloud infrastructure,
+          obsessing over uptime, and automating everything that dares to be manual.
+        </p>
+        <div class="hero-btns">
+          <a href="#s6" class="btn btn--dark">Say Hello ↗</a>
+          <a href="#s3" class="btn btn--outline">View Work</a>
+        </div>
+        <div class="hero-skills-row">
+          <span class="skill-pill">AWS</span>
+          <span class="skill-pill p2">Kubernetes</span>
+          <span class="skill-pill p3">Terraform</span>
+          <span class="skill-pill p4">Python</span>
+          <span class="skill-pill p5">Go</span>
+          <span class="skill-pill">Docker</span>
+          <span class="skill-pill p2">Grafana</span>
+          <span class="skill-pill p3">ArgoCD</span>
+        </div>
+      </div>
+      <div class="hero-canvas-wrap">
+        <canvas id="heroCanvas" width="460" height="460"></canvas>
+      </div>
+    </div>
+
+    <div class="scroll-arrow">
+      <span>Scroll</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M12 5v14M5 15l7 7 7-7" stroke="var(--dark)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Marquee 1 -->
+  <div class="marquee-wrap marquee-wrap--dark" aria-hidden="true">
+    <div class="marquee-inner">
+      <span>CLOUD INFRA</span><span class="dot">✦</span>
+      <span>KUBERNETES</span><span class="dot">✦</span>
+      <span>TERRAFORM</span><span class="dot">✦</span>
+      <span>PYTHON</span><span class="dot">✦</span>
+      <span>GO</span><span class="dot">✦</span>
+      <span>GRAFANA</span><span class="dot">✦</span>
+      <span>ARGOCD</span><span class="dot">✦</span>
+      <span>AWS</span><span class="dot">✦</span>
+      <span>JENKINS</span><span class="dot">✦</span>
+      <span>DEVOPS / SRE</span><span class="dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>CLOUD INFRA</span><span class="dot">✦</span>
+      <span>KUBERNETES</span><span class="dot">✦</span>
+      <span>TERRAFORM</span><span class="dot">✦</span>
+      <span>PYTHON</span><span class="dot">✦</span>
+      <span>GO</span><span class="dot">✦</span>
+      <span>GRAFANA</span><span class="dot">✦</span>
+      <span>ARGOCD</span><span class="dot">✦</span>
+      <span>AWS</span><span class="dot">✦</span>
+      <span>JENKINS</span><span class="dot">✦</span>
+      <span>DEVOPS / SRE</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Section: Numbers -->
+  <section id="s2" class="section section--numbers">
+    <svg class="float-svg" style="top:5%;right:4%;width:90px;animation-duration:5s" viewBox="0 0 80 80" aria-hidden="true">
+      <path d="M40 5 L45 30 L70 35 L45 40 L40 75 L35 40 L10 35 L35 30 Z" fill="var(--red)" stroke="var(--dark)" stroke-width="2.5"/>
+    </svg>
+    <svg class="float-svg" style="bottom:8%;left:3%;width:70px;animation-duration:4s;animation-delay:.5s" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="27" fill="none" stroke="var(--dark)" stroke-width="2.5" stroke-dasharray="6 4"/>
+    </svg>
+
+    <h2 class="section-heading reveal">THE NUMBERS<br/><span class="accent">DON'T LIE.</span></h2>
+    <div class="numbers-grid">
+      <div class="num-card num-card--white reveal d1">
+        <div class="num-big">$20K</div>
+        <div class="num-desc">Monthly cloud costs saved via S3 lifecycle, VPC endpoints &amp; EC2 optimization</div>
+      </div>
+      <div class="num-card num-card--red reveal d2">
+        <div class="num-big">90%</div>
+        <div class="num-desc">Manual config tasks eliminated through Terraform + Go automation framework</div>
+      </div>
+      <div class="num-card num-card--teal reveal d3">
+        <div class="num-big">50%</div>
+        <div class="num-desc">Reduction in Mean Time To Resolution on crash analysis system</div>
+      </div>
+      <div class="num-card num-card--sky reveal d4">
+        <div class="num-big">50+</div>
+        <div class="num-desc">Crashes processed weekly via automated Python pipeline with JIRA integration</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Experience -->
+  <section id="s3" class="section section--experience">
+    <svg class="float-svg" style="top:4%;right:3%;width:100px;animation-duration:6s" viewBox="0 0 100 100" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2.5"/>
+      <circle cx="50" cy="50" r="28" fill="var(--red)" stroke="var(--dark)" stroke-width="2"/>
+      <circle cx="50" cy="50" r="12" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2"/>
+      <ellipse cx="50" cy="68" rx="42" ry="8" fill="none" stroke="var(--dark)" stroke-width="2"/>
+    </svg>
+    <svg class="float-svg" style="bottom:10%;right:2%;width:80px;animation-duration:4.5s;animation-delay:.7s" viewBox="0 0 70 70" aria-hidden="true">
+      <path d="M35 8 L40 27 L60 32 L40 37 L35 62 L30 37 L10 32 L30 27 Z" fill="none" stroke="var(--dark)" stroke-width="2.5"/>
+    </svg>
+
+    <div class="section-heading section-heading--outline reveal">
+      <span class="outline">WORK</span><br/>HISTORY
+    </div>
+
+    <div class="exp-cards">
+      <article class="exp-card exp-card--white reveal d1">
+        <div class="exp-card__body">
+          <p class="exp-period">July 2023 — June 2025</p>
+          <h3 class="exp-role">DevOps Engineer / SRE</h3>
+          <p class="exp-company">Nile Secure · Bengaluru, Karnataka</p>
+          <ul class="exp-bullets">
+            <li>Automated crash analysis system in Python processing 50+ crashes/week via JIRA.<span class="badge">−50% MTTR</span></li>
+            <li>Architected LaunchDarkly automation with Terraform modules + Go utilities.<span class="badge">−90% manual work</span></li>
+            <li>Optimised S3 lifecycle, VPC endpoints &amp; EC2 resources for direct cost savings.<span class="badge">$20K/mo saved</span></li>
+            <li>Comprehensive observability: OpenSearch alerting → Slack + OpsGenie for real-time SLO monitoring.</li>
+            <li>Modernised deployments using Kubernetes &amp; Terraform for HA multi-environment management.</li>
+            <li>On-call for critical production; RCA-focused incident response &amp; post-incident remediation.</li>
+          </ul>
+        </div>
+        <div class="exp-icon" aria-hidden="true">☁️</div>
+      </article>
+
+      <article class="exp-card exp-card--yellow reveal d2">
+        <div class="exp-card__body">
+          <p class="exp-period">Nov 2022 — Mar 2023</p>
+          <h3 class="exp-role">Teaching Assistant</h3>
+          <p class="exp-company">PES University · Bengaluru, India</p>
+          <ul class="exp-bullets">
+            <li>Mentored 50+ students in Python programming labs with hands-on guidance.</li>
+            <li>Ran 1:1 debugging sessions tackling complex data-structure logic issues.</li>
+            <li>Delivered best-practice training in software development methodologies.</li>
+          </ul>
+        </div>
+        <div class="exp-icon" aria-hidden="true">🎓</div>
+      </article>
+
+      <article class="exp-card exp-card--teal reveal d3">
+        <div class="exp-card__body">
+          <p class="exp-period">Aug 2019 — May 2023</p>
+          <h3 class="exp-role">B.S. Computer Science</h3>
+          <p class="exp-company">PES University · Bengaluru — GPA 7.69</p>
+          <ul class="exp-bullets">
+            <li>Four-Time Academic Distinction Awardee across all four years.</li>
+            <li>IEEE publication: "Gesture Recognition Glove for ASL Using Accelerometers."</li>
+            <li>2nd Runner-Up — Nile Hackathon 2023 with automated crash tool.</li>
+          </ul>
+        </div>
+        <div class="exp-icon" aria-hidden="true">🏫</div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section: Skills -->
+  <section id="s4" class="section section--skills">
+    <svg class="float-svg" style="top:5%;left:2%;width:80px;animation-duration:5.5s" viewBox="0 0 70 70" aria-hidden="true">
+      <path d="M35 5 L40 27 L63 32 L40 37 L35 65 L30 37 L7 32 L30 27 Z" fill="var(--yellow)" stroke="var(--dark)" stroke-width="2.5"/>
+    </svg>
+    <svg class="float-svg" style="bottom:8%;right:4%;width:70px;animation-duration:4s;animation-delay:.9s" viewBox="0 0 60 60" aria-hidden="true">
+      <rect x="8" y="8" width="44" height="44" rx="10" fill="none" stroke="var(--yellow)" stroke-width="2.5" transform="rotate(20 30 30)"/>
+    </svg>
+
+    <h2 class="skills-heading reveal">THE<br/>TECH<br/>STACK</h2>
+
+    <div class="skills-cols">
+      <div class="sk-block sk-block--yellow reveal d1">
+        <div class="sk-title">☁️ Cloud Platforms</div>
+        <div class="sk-tags">
+          <span class="sk-tag">AWS EC2</span><span class="sk-tag">VPC</span><span class="sk-tag">IAM</span>
+          <span class="sk-tag">Lambda</span><span class="sk-tag">RDS</span><span class="sk-tag">S3</span>
+          <span class="sk-tag">CloudWatch</span><span class="sk-tag">GCP</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--dark reveal d2">
+        <div class="sk-title">🏗️ Infrastructure as Code</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Terraform</span><span class="sk-tag">Helm</span><span class="sk-tag">ArgoCD</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--teal reveal d3">
+        <div class="sk-title">🐳 Containers &amp; Orchestration</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Kubernetes</span><span class="sk-tag">Docker</span><span class="sk-tag">Helm</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--sky reveal d1">
+        <div class="sk-title">🔁 CI/CD &amp; Automation</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Jenkins</span><span class="sk-tag">BitBucket</span>
+          <span class="sk-tag">ArgoCD</span><span class="sk-tag">GIT</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--plum reveal d2">
+        <div class="sk-title">📈 Observability</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Grafana</span><span class="sk-tag">Prometheus</span><span class="sk-tag">Loki</span>
+          <span class="sk-tag">OpenSearch</span><span class="sk-tag">CloudWatch</span><span class="sk-tag">OpsGenie</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--dark reveal d3">
+        <div class="sk-title">💻 Programming</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Python</span><span class="sk-tag">Go</span><span class="sk-tag">Bash</span>
+          <span class="sk-tag">MySQL</span><span class="sk-tag">MongoDB</span>
+        </div>
+      </div>
+      <div class="sk-block sk-block--yellow reveal d4">
+        <div class="sk-title">🗂️ Tracking &amp; Collab</div>
+        <div class="sk-tags">
+          <span class="sk-tag">Jira</span><span class="sk-tag">Confluence</span><span class="sk-tag">Bitbucket</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Achievements -->
+  <section id="s5" class="section section--achievements">
+    <svg class="float-svg" style="top:4%;right:4%;width:90px;animation-duration:5s;animation-delay:.3s" viewBox="0 0 80 80" aria-hidden="true">
+      <path d="M40 8 L44 30 L67 34 L44 38 L40 72 L36 38 L13 34 L36 30 Z" fill="var(--red)" stroke="var(--dark)" stroke-width="2.5"/>
+    </svg>
+
+    <h2 class="section-heading reveal">
+      AWARDS &amp;<br/><span class="accent">WINS</span>
+    </h2>
+
+    <div class="ach-grid">
+      <div class="ach-card ach-card--yellow reveal d1">
+        <span class="ach-year">2023</span>
+        <span class="ach-emoji" aria-hidden="true">🥉</span>
+        <h3 class="ach-title">Nile Hackathon 2nd Runner-Up</h3>
+        <p class="ach-desc">Built an automated crash analysis tool that won 2nd runner-up at Nile Secure's company-wide hackathon.</p>
+        <svg class="burst" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 0 L43 35 L80 40 L43 45 L40 80 L37 45 L0 40 L37 35 Z" fill="var(--dark)"/></svg>
+      </div>
+      <div class="ach-card ach-card--red reveal d2">
+        <span class="ach-year">2023</span>
+        <span class="ach-emoji" aria-hidden="true">📄</span>
+        <h3 class="ach-title">IEEE Publication</h3>
+        <p class="ach-desc">Co-authored "Gesture Recognition Glove for ASL Using Accelerometers" — published on IEEE Xplore, doi: 10.1109/InCACCT57535.2023</p>
+        <svg class="burst" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 0 L43 35 L80 40 L43 45 L40 80 L37 45 L0 40 L37 35 Z" fill="#fff"/></svg>
+      </div>
+      <div class="ach-card ach-card--sky reveal d3">
+        <span class="ach-year">2019–23</span>
+        <span class="ach-emoji" aria-hidden="true">🏅</span>
+        <h3 class="ach-title">4× Academic Distinction</h3>
+        <p class="ach-desc">Awarded Academic Distinction every single year across four consecutive years at PES University, Bengaluru.</p>
+        <svg class="burst" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 0 L43 35 L80 40 L43 45 L40 80 L37 45 L0 40 L37 35 Z" fill="var(--dark)"/></svg>
+      </div>
+      <div class="ach-card ach-card--plum reveal d4">
+        <span class="ach-year">Pre-Uni</span>
+        <span class="ach-emoji" aria-hidden="true">🎓</span>
+        <h3 class="ach-title">Top Academic Scores</h3>
+        <p class="ach-desc">94.2% at Narayana Junior College (MPC) &amp; 9.8 GPA at Jubilee Hills Public School — consistently top of class.</p>
+        <svg class="burst" viewBox="0 0 80 80" aria-hidden="true"><path d="M40 0 L43 35 L80 40 L43 45 L40 80 L37 45 L0 40 L37 35 Z" fill="var(--dark)"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee 2 -->
+  <div class="marquee-wrap marquee-wrap--red" aria-hidden="true">
+    <div class="marquee-inner marquee-inner--reverse">
+      <span>OPEN TO WORK</span><span class="dot">✦</span>
+      <span>PLATFORM ENGINEERING</span><span class="dot">✦</span>
+      <span>SRE ROLES</span><span class="dot">✦</span>
+      <span>DEVOPS ENGINEERING</span><span class="dot">✦</span>
+      <span>CLOUD ARCHITECTURE</span><span class="dot">✦</span>
+      <span>OPEN TO WORK</span><span class="dot">✦</span>
+      <span>PLATFORM ENGINEERING</span><span class="dot">✦</span>
+      <span>SRE ROLES</span><span class="dot">✦</span>
+      <span>DEVOPS ENGINEERING</span><span class="dot">✦</span>
+      <span>CLOUD ARCHITECTURE</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- Section: Contact -->
+  <section id="s6" class="section section--contact">
+    <svg class="float-svg" style="top:10%;left:4%;width:90px;animation-duration:6s" viewBox="0 0 80 80" aria-hidden="true">
+      <path d="M40 5 L44 32 L70 36 L44 40 L40 75 L36 40 L10 36 L36 32 Z" fill="var(--yellow)"/>
+    </svg>
+    <svg class="float-svg" style="top:15%;right:5%;width:70px;animation-duration:5s;animation-delay:.8s" viewBox="0 0 60 60" aria-hidden="true">
+      <circle cx="30" cy="30" r="27" fill="none" stroke="var(--red)" stroke-width="3"/>
+      <circle cx="30" cy="30" r="14" fill="var(--red)"/>
+    </svg>
+
+    <h2 class="contact-big reveal">LET'S<br/>BUILD<br/><span>GREAT</span><br/>THINGS.</h2>
+    <p class="contact-sub reveal d1">Open to DevOps / SRE / Platform Engineering roles.<br/>Let's talk cloud, reliability &amp; automation.</p>
+    <div class="contact-row reveal d2">
+      <a href="mailto:kumudakalidindi01@gmail.com" class="cbtn cbtn--yellow">✉ Email Me</a>
+      <a href="https://linkedin.com/in/kumuda" target="_blank" rel="noopener" class="cbtn cbtn--red">LinkedIn ↗</a>
+      <a href="tel:+919121825611" class="cbtn cbtn--ghost">+91 91218 25611</a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    Designed &amp; built with ♥ · Kumuda Kalidindi · DevOps / SRE · Hyderabad, India
+  </footer>
+
+  <!-- Vendor -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- App JS (order matters) -->
+  <script src="js/data.js"></script>
+  <script src="js/cursor.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/marquee.js"></script>
+  <script src="js/reveal.js"></script>
+  <script src="js/parallax.js"></script>
+  <script src="js/three-scene.js"></script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+/* css/base.css — Body, typography, shared helpers */
+
+body {
+  font-family: var(--font-body);
+  background: var(--yellow);
+  color: var(--dark);
+  cursor: none;
+}
+
+/* ── Sections ── */
+.section {
+  position: relative;
+  overflow: hidden;
+  min-height: 100vh;
+  padding: var(--section-py) var(--section-px);
+}
+
+/* ── Section headings ── */
+.section-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  color: var(--dark);
+  line-height: 0.95;
+  margin-bottom: 3rem;
+}
+
+.section-heading .accent  { color: var(--red); }
+.section-heading .outline {
+  -webkit-text-stroke: 3px var(--dark);
+  color: transparent;
+}
+
+/* ── Shared card base ── */
+.card-base {
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.card-base:hover {
+  transform: translate(-3px, -4px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ── Shared button base ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-body);
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: none;
+}
+.btn:hover  { transform: translate(-2px, -2px); box-shadow: var(--shadow-md); }
+.btn:active { transform: translate(2px, 2px);   box-shadow: 2px 2px 0 var(--dark); }
+
+.btn--dark    { background: var(--dark);  color: var(--yellow); }
+.btn--outline { background: transparent; color: var(--dark); }
+
+/* ── Badge ── */
+.badge {
+  display: inline-block;
+  padding: 0.15rem 0.55rem;
+  background: var(--red);
+  color: var(--white);
+  border: var(--border-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.6rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+  box-shadow: 2px 2px 0 var(--dark);
+}
+
+/* ── Footer ── */
+.site-footer {
+  background: var(--dark);
+  border-top: 3px solid rgba(255,255,255,.07);
+  padding: 2rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.25);
+}
+
+/* ── Floating SVG decorator ── */
+.float-svg {
+  position: absolute;
+  pointer-events: none;
+  animation: floatY 4s ease-in-out infinite;
+  will-change: transform;
+}
+.float-svg:nth-child(even) { animation-direction: alternate-reverse; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  :root {
+    --section-px: 5vw;
+    --section-py: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  :root { --section-py: 60px; }
+}

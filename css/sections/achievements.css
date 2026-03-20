@@ -1,0 +1,80 @@
+/* css/sections/achievements.css */
+
+.section--achievements {
+  background: var(--teal);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+/* ── Grid ── */
+.ach-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ── Card base ── */
+.ach-card {
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow-lg);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+  position: relative;
+  overflow: hidden;
+}
+.ach-card:hover {
+  transform: translate(-4px, -4px) rotate(-0.8deg);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Colour variants */
+.ach-card--yellow { background: var(--yellow); }
+.ach-card--red    { background: var(--red); }
+.ach-card--sky    { background: var(--sky); }
+.ach-card--plum   { background: var(--plum); }
+
+/* ── Contents ── */
+.ach-year {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-weight: 800;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
+.ach-emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.ach-title {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--dark);
+  margin-bottom: 0.6rem;
+  line-height: 1.1;
+}
+
+.ach-desc {
+  font-size: 0.78rem;
+  color: rgba(26, 26, 26, 0.68);
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+/* ── Background starburst ── */
+.burst {
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  opacity: 0.12;
+  pointer-events: none;
+}

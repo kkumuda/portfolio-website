@@ -1,0 +1,57 @@
+/* css/nav.css */
+
+#main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+  height: var(--nav-h);
+  background: var(--bg-s1); /* updated dynamically by nav.js */
+  border-bottom: 3px solid var(--dark);
+  transition: background var(--transition-slow),
+              border-color var(--transition-slow);
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--dark);
+  letter-spacing: 0.02em;
+  transition: color var(--transition-slow);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: opacity var(--transition-fast), color var(--transition-slow);
+}
+.nav-links a:hover { opacity: 0.5; }
+
+.nav-right {
+  font-weight: 800;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--dark);
+  transition: color var(--transition-slow);
+}
+
+/* ── Mobile ── */
+@media (max-width: 600px) {
+  #main-nav { padding: 0 1.5rem; }
+  .nav-links { gap: 1rem; }
+  .nav-right  { display: none; }
+}

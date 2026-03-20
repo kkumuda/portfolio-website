@@ -1,0 +1,53 @@
+/* css/variables.css
+   ─────────────────────────────────────────
+   Single source of truth for all design tokens.
+   Edit here to retheme the whole site.
+   ───────────────────────────────────────── */
+
+:root {
+  /* ── Palette ── */
+  --red:    #FF4C29;
+  --yellow: #FFD235;
+  --teal:   #7FDDB5;
+  --sky:    #6BD4F7;
+  --plum:   #C77DFF;
+  --dark:   #1a1a1a;
+  --white:  #ffffff;
+  --cream:  #fffdf7;
+
+  /* ── Section background map (used by nav.js) ── */
+  --bg-s1: var(--red);
+  --bg-s2: var(--yellow);
+  --bg-s3: var(--sky);
+  --bg-s4: var(--red);
+  --bg-s5: var(--teal);
+  --bg-s6: var(--dark);
+
+  /* ── Typography ── */
+  --font-display: 'Black Han Sans', sans-serif;
+  --font-body:    'Nunito', sans-serif;
+
+  /* ── Borders & Shadows ── */
+  --border:        2.5px solid var(--dark);
+  --border-light:  2px solid var(--dark);
+  --shadow-sm:     3px 3px 0 var(--dark);
+  --shadow-md:     5px 5px 0 var(--dark);
+  --shadow-lg:     6px 6px 0 var(--dark);
+  --shadow-xl:     9px 9px 0 var(--dark);
+
+  /* ── Spacing ── */
+  --section-px:    6vw;
+  --section-py:    100px;
+  --nav-h:         70px;
+
+  /* ── Border radius ── */
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-pill: 100px;
+
+  /* ── Transitions ── */
+  --transition-fast:   0.15s ease;
+  --transition-base:   0.25s ease;
+  --transition-slow:   0.5s ease;
+}

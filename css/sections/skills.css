@@ -1,0 +1,87 @@
+/* css/sections/skills.css */
+
+.section--skills {
+  background: var(--red);
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+
+/* ── Heading ── */
+.skills-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 6rem);
+  color: var(--yellow);
+  -webkit-text-stroke: 3px var(--dark);
+  text-align: center;
+  line-height: 0.95;
+}
+
+/* ── Grid ── */
+.skills-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* ── Block base ── */
+.sk-block {
+  border: var(--border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+.sk-block:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* Colour variants */
+.sk-block--dark  { background: var(--dark); }
+.sk-block--yellow{ background: var(--yellow); }
+.sk-block--teal  { background: var(--teal); }
+.sk-block--sky   { background: var(--sky); }
+.sk-block--plum  { background: var(--plum); }
+
+/* ── Block title ── */
+.sk-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--dark);
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sk-block--dark .sk-title { color: var(--yellow); }
+
+/* ── Tag cloud ── */
+.sk-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.sk-tag {
+  padding: 0.28rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  font-size: 0.68rem;
+  letter-spacing: 0.04em;
+  background: var(--dark);
+  color: var(--white);
+  border: var(--border-light);
+  transition: transform var(--transition-fast);
+  cursor: default;
+}
+.sk-tag:hover { transform: translateY(-2px); }
+
+/* Tag colours per block variant */
+.sk-block--yellow .sk-tag { background: var(--white); color: var(--dark); }
+.sk-block--teal   .sk-tag { background: var(--dark);  color: var(--teal); }
+.sk-block--sky    .sk-tag { background: var(--dark);  color: var(--sky); }
+.sk-block--plum   .sk-tag { background: var(--dark);  color: var(--plum); }

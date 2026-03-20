@@ -1,0 +1,76 @@
+/* css/animations.css — All @keyframes + reveal utility classes */
+
+/* ── Float ── */
+@keyframes floatY {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-18px); }
+}
+
+/* ── Scroll bobbing arrow ── */
+@keyframes bob {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(8px); }
+}
+
+/* ── Marquee scroll ── */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* ── Spin (used on sparkle SVGs if needed) ── */
+@keyframes spinSpark {
+  to { transform: rotate(360deg); }
+}
+
+/* ─────────────────────────────────────────
+   REVEAL UTILITY CLASSES
+   Applied by js/reveal.js via IntersectionObserver
+   ───────────────────────────────────────── */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-left.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.reveal-right.in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal-scale.in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Stagger delay helpers */
+.d1 { transition-delay: 0.10s; }
+.d2 { transition-delay: 0.22s; }
+.d3 { transition-delay: 0.34s; }
+.d4 { transition-delay: 0.46s; }
+.d5 { transition-delay: 0.58s; }
